@@ -59,7 +59,7 @@ Training scripts are as follows. They have been initialized to run as Ones Class
 4) `train_agcnn_cral.py` -- trains the AG-CNN model using the 3 Class Classification approach
 
 ## MODELS FILES
-`mymodels.py` This file has all the Ones Classification models except CRAL ATT 2 Ones. The other models are in the following files and can be inspected to see the modeling structure.
-`mycral_att1_multi.py` This file has the CRAL ATT 1 3 Class Classification Model
-`mycral_att2_multi.py` This file has the CRAL ATT 2 3 Class Classification Model
-`mycral_att2_ones.py` This file has the CRAL ATT 2 Ones Classification Model
+1) `mymodels.py` This file has all the Ones Classification models except CRAL ATT 2 Ones. The other models are in the following files and can be inspected to see the modeling structure.
+2) `mycral_att1_multi.py` This file has the CRAL ATT 1 3 Class Classification Model
+3) `mycral_att2_multi.py` This file has the CRAL ATT 2 3 Class Classification Model
+4) `mycral_att2_ones.py` This file has the CRAL ATT 2 Ones Classification Model
