@@ -35,7 +35,7 @@ This runs the DenseNet-121 model using Imagenet pretrained weights but using the
 `python evaluation.py 'CRAL_ATT1_ONES'`
 This runs the CRAL model with Att1 attention module and using the 'Ones Classification' approach. Att1 architecture has been described in the paper
 
-`python evaluation.py 'CRAL_ATT2_ONES'`
+`python evaluation.py 'CRAL_ATT2_ONES'` <\br>
 This runs the CRAL model with Att2 attention module and using the 'Ones Classification' approach. Att2 architecture has been described in the paper.
 
 After running these models you should be able to replicate the results in Figure 3 of paper shown below. Please do not try to run the other Multiclassification models as models for those have been left out from submission. You will get an error if you try to run any other model other than the 5 listed above.
