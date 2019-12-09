@@ -21,7 +21,7 @@ Then run the folllowing command from the bd4h_project folder:
 
 `python evaluation.py 'AGCNN_ONES'`
 
-This command runs the best model which is the AGCNN using the 'Ones Classification' approach mentioned by Irvin et al and it prints out the model performance on validation set in terms of its AUC, Accuracy and Loss. It also saves a copy of the results in the modell_output folder under the csv filename: auc_all_classes_AGCNN_ONES.csv
+This command runs the best model which is the AGCNN using the 'Ones Classification' approach mentioned by Irvin et al and it prints out the model performance on validation set in terms of its AUC, Accuracy and Loss. It also saves a copy of the results in the modell_output folder under the csv filename: `auc_all_classes_AGCNN_ONES.csv`
 
 ## OTHER MODEL RUNS
 Additionally you can also run a few more models for evaluation on validation set using the following commands. 
