@@ -41,7 +41,7 @@ This runs the CRAL model with Att2 attention module and using the 'Ones Classifi
 After running these models you should be able to replicate the results in Figure 3 of paper shown below. Please do not try to run the other Multiclassification models as models for those have been left out from submission. You will get an error if you try to run any other model other than the 5 listed above.
 
 ## Evaluation Notebook
-Model predictions from previous iteration have been saved in the model_output/preds folder. You can run the `X_Ray_Models_Analysis.ipynb` notebook to see the results of each model and the ROC and Confusion matrices. 
+Model predictions from previous iteration have been saved in the `model_output/preds` folder. You can run the `X_Ray_Models_Analysis.ipynb` notebook to see the results of each model and the ROC and Confusion matrices. 
 
 Note that these predictions are from a previous model run so results are slightly different than the current validation results.
 
