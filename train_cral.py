@@ -24,7 +24,7 @@ BATCH_SIZE = 32
 USE_CUDA = True 
 NUM_WORKERS = 16
 LR = 0.00001
-MULTICLASS_FLAG = True
+MULTICLASS_FLAG = False
 save_file = 'cral_320.pth'
 IMG_SIZE = 320
 
@@ -43,7 +43,6 @@ normalize = transforms.Normalize(
 
 image_transformations = transforms.Compose([
    transforms.Resize((IMG_SIZE,IMG_SIZE)),
-   #transforms.CenterCrop(224),
    transforms.RandomHorizontalFlip(),
    transforms.ToTensor(),
    normalize,
@@ -65,15 +64,13 @@ if device == "cuda":
 	torch.backends.cudnn.benchmark = False
 
 print('Training ' + str(MODEL_TYPE))
-#criterion = nn.BCEWithLogitsLoss()
-criterion = nn.BCELoss()
+criterion = nn.BCEWithLogitsLoss()
+#criterion = nn.BCELoss()
 model = MyCRAL()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
 criterion.to(device)
-#print('Model Summary')
-#print(summary(model, (3, IMG_SIZE, IMG_SIZE)))
 optimizer = optim.Adam(model.parameters(), lr=LR, betas=(0.9, 0.999), eps=1e-08, weight_decay=1e-4)
 
 best_val_losses = 1000000.00

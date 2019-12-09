@@ -24,7 +24,7 @@ BATCH_SIZE = 32
 USE_CUDA = False
 NUM_WORKERS = 16
 LR = 0.00001
-MULTICLASS_FLAG = True
+MULTICLASS_FLAG = False
 save_file = 'DenseNet_320.pth'
 IMG_SIZE = 320
 
@@ -118,7 +118,6 @@ print(train_losses)
 print('Valid Losses')
 print(valid_losses)
 
-##we evaluate using only the fusion model
 test_loss, test_accuracy, test_results = evaluate(best_model, device, valid_loader, criterion,10,False)
 
 print('Test Loss: ' + str(test_loss))

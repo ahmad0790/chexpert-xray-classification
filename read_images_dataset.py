@@ -19,16 +19,6 @@ class ImagesDataset(Dataset):
 			num_features (int): number of total features available
 		"""
 
-		##read labels
-
-		'''
-		self.labels = pd.read_csv(os.path.join(root_dir, labels_file))
-		self.labels = np.array(labels.iloc[:,5:])
-		
-		if labels_type == 'Ones':
-			self.labels[self.labels==-1] = 1
-		'''
-
 		images_list = []
 		labels_list = []
 		
@@ -41,7 +31,6 @@ class ImagesDataset(Dataset):
 				
 					cols = line.strip('\n').split(',')
 					image_name= cols[0]
-					#print(image_name)
 					
 					labels = cols[5:]
 
@@ -78,9 +67,7 @@ class ImagesDataset(Dataset):
 
 					labels_copied = np.copy(labels_copy)
 
-					#print(labels_copy)
 					if multiclass == True:
-						#labels_list.append([labels_zero, labels_ones, labels_uncertain])
 						labels_list.append([labels_copied[2,:], labels_copied[1,:], labels_copied[0,:]])
 
 					else:
@@ -90,8 +77,6 @@ class ImagesDataset(Dataset):
 
 				rows_read += 1
 
-				#print(labels_list)
-
 		self.images = images_list
 		self.labels_list = labels_list
 		self.transform = transform
@@ -100,10 +85,8 @@ class ImagesDataset(Dataset):
 		return len(self.labels_list)
 
 	def __getitem__(self, index):
-		# returns will be wrapped as List of Tensor(s) by DataLoader
-
+		
 		image_name = self.images[index]
-		#print(image_name)
 		image = Image.open(image_name).convert('RGB')
 		label = self.labels_list[index]
 		if self.transform is not None:

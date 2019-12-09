@@ -25,7 +25,7 @@ from torchsummary import summary
 # Some parameters
 MODEL_TYPE = 'AG-CNN'
 NUM_EPOCHS = 5
-BATCH_SIZE = 32
+BATCH_SIZE = 16
 USE_CUDA = True
 NUM_WORKERS = 16
 MULTICLASS_FLAG = False
@@ -219,12 +219,6 @@ print(' ')
 test_prob, test_labels = predict_disease_agcnn(best_global_model, best_local_model, best_fusion_model, device, valid_loader, 'local')
 np.save('output/validation_predictions_local_agcnn.npy', test_prob)
 np.save('output/validation_labels_local_agcnn.npy', test_labels)
-
-#print('The shape of the predictions')
-#print(test_prob.shape)
-#print(test_labels.shape)
-#print(test_labels[0,:])
-#print(test_prob[0,:])
 
 roc_auc_scores_list = []
 for i in range(0,14):

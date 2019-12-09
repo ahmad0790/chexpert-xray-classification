@@ -4,9 +4,7 @@ import numpy as np
 from sklearn.metrics import confusion_matrix
 
 def plot_learning_curves(train_losses, valid_losses, train_accuracies, valid_accuracies, model='_'):
-	# TODO: Make plots for loss curves and accuracy curves.
-	# TODO: You do not have to return the plots.
-	# TODO: You can save plots as files by codes here or an interactive way according to your preference.
+
 	plt.figure()
 	plt.plot(np.arange(len(train_losses)), train_losses, label='Train Loss')
 	plt.plot(np.arange(len(valid_losses)), valid_losses, label='Validation Loss')
@@ -28,9 +26,6 @@ def plot_learning_curves(train_losses, valid_losses, train_accuracies, valid_acc
 
 
 def plot_confusion_matrix(results, class_names):
-	# TODO: Make a confusion matrix plot.
-	# TODO: You do not have to return the plots.
-	# TODO: You can save plots as files by codes here or an interactive way according to your preference.
 	
 	#code credit: https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html
 
