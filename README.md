@@ -9,9 +9,13 @@ a) using attention scheme 1
 b) using attention scheme 2
 
 ## BEST MODEL RUN (AG_CNN)
-The models are all in model_output folder. To run the best model please download this folder and please first install the provided environment using:
+The models are all in `model_output` folder. To run the best model please download this folder and please first install the provided environment using:
 
 `conda env create -f environment.yml`
+
+You can activate  environment after using:
+
+`source activate bd4h_project`
 
 Then run the folllowing command from the bd4h_project folder:
 
@@ -42,7 +46,7 @@ Model predictions from previous iteration have been saved in the model_output/pr
 Note that these predictions are from a previous model run so results are slightly different than the current validation results.
 
 ## Results Paper
-The results are all in the paper in the presentation folder. The folder also contains the presentation.
+The results are all in the paper in the `/presentation` folder. The folder also contains the presentation.
 
 ## TRAINING SCRIPTS
 Training scripts are as follows. They have been initialized to run as Ones Classification. Note they will not run without first downloading training data from Chexpert. Some of these scripts can take 1 day to run.
