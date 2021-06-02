@@ -3,10 +3,16 @@
 This repo contains the code for the deep learning models used to predict X Ray disease using CheXpert data. 4 models were built for this project.
 
 1) DenseNet-121
-2) Attention Guided Convolutional Neural Network (AG-CNN)
-3) Category Wise Residual Learning (CRAL)
+2) Attention Guided Convolutional Neural Network (AG-CNN): based on the paper. `Diagnose like a Radiologist: Attention Guided Convolutional Neural Network for Thorax Disease Classification, Guan et al 2018`(https://arxiv.org/abs/1801.09927)
+4) Category Wise Residual Learning (CRAL): based on the paper. `Multi-label chest X-ray image classification via category-wise residual attention learning, Guan et al 2018`(https://www.sciencedirect.com/science/article/abs/pii/S0167865518308559)
 a) using attention scheme 1
 b) using attention scheme 2
+
+# Results and Paper
+The results and analysis for this modeling project can be found in the file
+`Chest_X_Ray_Disease_Diagnosis_Final_Report.pdf`
+
+A youtube video presentation of results is also uploaded here: https://www.youtube.com/watch?v=ZYfewy01shc&t=3s
 
 ## BEST MODEL RUN (AG_CNN)
 The models are all in `model_output` folder. To run the best model please download this folder and please first install the provided environment using:
